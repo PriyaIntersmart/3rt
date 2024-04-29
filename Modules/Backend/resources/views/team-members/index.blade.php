@@ -35,7 +35,12 @@
                                     <td><img src="{{ $team->image_value }}" width="50" height="50"></td>
                                     <td>{{ $team->name }}</td>
                                     <td>{{ $team->designation }}</td>
-                                    <td>{{ $team->designation }}</td>
+                                    <td>
+                                        <input type="number"
+                                            value="{{ $team->sort_order }}" class="form-control sort-order w-25"
+                                            data-model="TeamMember" data-id="{{ base64_encode($team->id) }}"
+                                            name="sort_order">
+                                    </td>
                                     <td>
                                         <div class="form-check form-switch">
                                             <input type="checkbox" class="form-check-input status" data-model="TeamMember"

@@ -15,7 +15,7 @@ class TeamRequest extends FormRequest
             'type'=>'required',
             'name'=> 'required|max:20',
             'designation'=>'required',
-            'description' => 'required|min:3|max:80',
+            'description' => 'required|min:3|max:500',
             'sort_order' => 'integer|min:0',
 
         ];

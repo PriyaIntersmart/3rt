@@ -76,8 +76,8 @@ Route::prefix('3RT-admin-portal')->group(function () {
         Route::resource('admin-config', AdminConfigurationController::class);
 
         //about us
-        Route::get('about-cms/edit',[AboutCMsController::class,'edit'])->name('about-cms.edit');
-        Route::put('about-cms/{id}',[AboutCMsController::class,'update'])->name('about-cms.update');
+        Route::get('about-cms/edit', [AboutCMsController::class, 'edit'])->name('about-cms.edit');
+        Route::put('about-cms/{id}', [AboutCMsController::class, 'update'])->name('about-cms.update');
         //team management
         Route::resource('team-management', TeamController::class);
 
@@ -85,27 +85,27 @@ Route::prefix('3RT-admin-portal')->group(function () {
         Route::get('mining_cms/edit', [MiningCmsController::class, 'edit'])->name('mining_cms.edit');
         Route::put('mining_cms/{id}', [MiningCmsController::class, 'update'])->name('mining_cms.update');
 
-//mining process
-        Route::resource('mining-process',MiningProcessController::class);
-//location management -contact page
-        Route::resource('location',ContactusController::class);
+        //mining process
+        Route::resource('mining-process', MiningProcessController::class);
+        //location management -contact page
+        Route::resource('location', ContactusController::class);
         //key element management
-        Route::resource('key-element',KeyElementController::class);
+        Route::resource('key-element', KeyElementController::class);
 
         //structure over view
-        Route::get('/structure-overview/edit',[StructureCmsController::class,'edit'])->name('structure-overview.edit');
+        Route::get('/structure-overview/edit', [StructureCmsController::class, 'edit'])->name('structure-overview.edit');
 
-        Route::put('/structure-overview/{id}',[StructureCmsController::class,'update'])->name('structure-overview.update');
-//newsand events
-Route::resource('/news-events',NewsEventsController::class);
+        Route::put('/structure-overview/{id}', [StructureCmsController::class, 'update'])->name('structure-overview.update');
+        //newsand events
+        Route::resource('/news-events', NewsEventsController::class);
 
-Route::get('/news-events-cms/edit',[NewsEventsCMSController::class,'edit'])->name('news-events-cms.edit');
+        Route::get('/news-events-cms/edit', [NewsEventsCMSController::class, 'edit'])->name('news-events-cms.edit');
 
-Route::put('/news-events-cms/{id}',[NewsEventsCMSController::class,'update'])->name('news-events-cms.update');
-Route::resource('/address-management',AddressController::class);
+        Route::put('/news-events-cms/{id}', [NewsEventsCMSController::class, 'update'])->name('news-events-cms.update');
+        Route::resource('/address-management', AddressController::class);
 
-Route::resource('/count-setting',CountController::class);
-});
+        Route::resource('/count-setting', CountController::class);
+    });
 
 
 });

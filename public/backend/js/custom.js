@@ -148,6 +148,7 @@ $("body").on("change", ".sort-order", function () {
 var statusDebounceTimer;
 
 $("body").on("change", ".status", function () {
+    
     clearTimeout(statusDebounceTimer);
     var value = $(this).is(":checked") ? 1 : 0;
     var model = $(this).data("model");
@@ -156,8 +157,9 @@ $("body").on("change", ".status", function () {
 
     if (value === 0 || value === 1) {
         statusDebounceTimer = setTimeout(function () {
+            console.log('yes');
             $.ajax({
-                url:  + "/3RT-admin-portal/update-status",
+                url: "/3RT-admin-portal/update-status",
                 type: "POST",
                 data: {
                     id: id,
