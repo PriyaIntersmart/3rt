@@ -127,7 +127,7 @@
                         </div>
                         {!! $home_cms->section_two_description !!}
                         <div class="btnWrap">
-                            <a href="{{ route('structure-overview.edit') }}" class="baseBtn baseBtn1" aria-label="business">
+                            <a href="{{ route('structure.overview') }}" class="baseBtn baseBtn1" aria-label="business">
                                 <span>{{ $home_cms->section_two_button_title }}</span>
                                 <span class="rgtArrw">
                                     <img src="{{ asset('frontend/images/dElmt-rgtArrow.svg') }}" width="8" height="14" alt="rgtArrow">
