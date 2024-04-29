@@ -50,53 +50,21 @@
                                 loading="lazy" alt="">
                         </div>
                     </div>
+                    @if(!$count_setting->isEmpty())
                     <div class="flxbx">
+                        @foreach ($count_setting as $item)
                         <div class="item">
                             <div class="countBx" aria-label="count">
                                 <div class="bxWrap">
-                                    <h3 class="num"><span class="counter" data-countto="80"
-                                            data-duration="3000">0</span></h3>
-                                    <h5 class="txt">Km2</h5>
+                                    <h3 class="num">{!! @$item->text_before_count !!}<span class="counter" data-countto="{{@$item->count  }}" data-duration="3000">0</span>{!! @$item->text_after_count !!}</h3>
+                                    <div class="txt">{{ $item->subtitle }}</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="countBx" aria-label="count">
-                                <div class="bxWrap">
-                                    <h3 class="num"><span class="counter" data-countto="2023"
-                                            data-duration="3000">0</span></h3>
-                                    <h5 class="txt">Founded</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="countBx" aria-label="count">
-                                <div class="bxWrap">
-                                    <h3 class="num">OVER <span>$</span><span class="counter" data-countto="2.5"
-                                            data-duration="3000">0</span><sub>M</sub> </h3>
-                                    <h5 class="txt">Funds Raised to Date</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="countBx" aria-label="count">
-                                <div class="bxWrap">
-                                    <h3 class="num">OVER <span class="counter" data-countto="160"
-                                            data-duration="3000">0</span></h3>
-                                    <h5 class="txt">Combined Years of Experience</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="countBx" aria-label="count">
-                                <div class="bxWrap">
-                                    <h3 class="num"><span class="counter" data-countto="2.25"
-                                            data-duration="3000">0</span><sub>M OZ</sub> </h3>
-                                    <h5 class="txt">Minimum Resource Estimate to Date</h5>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
+                    @endif
                 </div>
                 {!! $about_cms->description !!}
 

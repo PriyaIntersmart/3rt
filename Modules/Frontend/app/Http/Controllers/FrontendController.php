@@ -56,7 +56,8 @@ class FrontendController extends Controller
         $senior_member = TeamMember::active()->where('type', 2)->get();//get the senior members
         $minior_process = Miningprocess::orderBy('sort_order')->active()->get();
         $minior_cms = MiningCms::first();
-        return view('frontend::about', compact('bannerandmeta', 'about_cms', 'team_member', 'senior_member', 'minior_process', 'minior_cms'));
+        $count_setting = countSetting::orderBy('sort_order')->active()->get();
+        return view('frontend::about', compact('bannerandmeta', 'about_cms', 'team_member', 'senior_member', 'minior_process', 'minior_cms','count_setting'));
     }
 
 
