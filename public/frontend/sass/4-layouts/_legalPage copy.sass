@@ -1,0 +1,185 @@
+/************** ******* **************/
+/************* LEGAL_PAGES *************/
+/************** ******* **************/
+.legalPage
+    position: relative
+    &.NOBanner
+        padding-top: 50px
+        @media only screen and (min-width: 576px)
+            padding-top: 80px
+        @media only screen and (min-width: 992px)
+            padding-top: 100px
+        @media only screen and (min-width: 1551px)
+            padding-top: 140px
+    #InnerBanner
+        .cntWrap
+            max-width: 1360px
+        .itemWrap
+            margin-top: 20px
+            justify-content: center
+            @include display
+            @media only screen and (min-width: 576px)
+                margin-top: 30px
+            @media only screen and (min-width: 992px)
+                margin-top: 40px
+            &>*
+                margin: 4px
+                @media only screen and (min-width: 576px)
+                    margin: 6px
+                @media only screen and (min-width: 992px)
+                    margin: 8px
+                @media only screen and (min-width: 1441px)
+                    margin: 10px
+    #Breadcrumb
+        position: absolute
+        top: 0
+        left: 0
+    #Content
+        padding: 30px 0
+        @media only screen and (min-width: 576px)
+            padding: 40px 0
+        @media only screen and (min-width: 992px)
+            padding: 60px 0
+        @media only screen and (min-width: 1441px)
+            padding: 80px 0
+
+    .cntWrap
+        h1, h2
+            line-height: 1.2
+            font-weight: 700
+            color: $text
+            margin: 10px 0
+            @media only screen and (min-width: 576px)
+                margin: 20px 0
+            @media only screen and (min-width: 992px)
+                margin: 30px 0
+        h1, h2
+            font-size: 20px
+            @media only screen and (min-width: 576px)
+                font-size: 26px
+            @media only screen and (min-width: 992px)
+                font-size: 40px
+            @media only screen and (min-width: 1200px)
+                font-size: 60px
+            @media only screen and (min-width: 1551px)
+                font-size: 80px
+        h3
+            font-size: 18px
+            line-height: 1.2
+            font-weight: 500
+            color: $white
+            margin-bottom: 15px
+            @media only screen and (min-width: 576px)
+                font-size: 20px
+                margin-bottom: 20px
+            @media only screen and (min-width: 992px)
+                font-size: 26px
+                margin-bottom: 30px
+            @media only screen and (min-width: 1200px)
+                font-size: 32px
+            @media only screen and (min-width: 1771px)
+                font-size: 40px
+        h4
+            font-size: 16px
+            line-height: 1.2
+            font-weight: 700
+            color: $white
+            margin-bottom: 15px
+            @media only screen and (min-width: 576px)
+                font-size: 18px
+                margin-bottom: 20px
+            @media only screen and (min-width: 992px)
+                font-size: 22px
+                margin-bottom: 30px
+            @media only screen and (min-width: 1200px)
+                font-size: 26px
+            @media only screen and (min-width: 1771px)
+                font-size: 30px
+        h5
+            font-size: 14px
+            line-height: 1.2
+            font-weight: 400
+            color: $white
+            @media only screen and (min-width: 576px)
+                font-size: 16px
+            @media only screen and (min-width: 992px)
+                font-size: 18px
+            @media only screen and (min-width: 1441px)
+                font-size: 20px
+        h6
+            font-size: 13px
+            line-height: 1.2
+            font-weight: 400
+            color: $white
+            @media only screen and (min-width: 576px)
+                font-size: 14px
+            @media only screen and (min-width: 992px)
+                font-size: 16px
+        img
+            max-width: 100%
+            max-height: 100%
+            will-change: transform
+            margin-bottom: 15px
+            @include imgFit
+            @media only screen and ( min-width: 576px )
+                margin-bottom: 20px
+            @media only screen and ( min-width: 992px )
+                margin-bottom: 30px
+        .txt
+            font-size: 12px
+            line-height: 1.4
+            font-weight: 700
+            color: $white
+            margin-bottom: 15px
+            @media only screen and (min-width: 376px)
+                font-size: 13px
+            @media only screen and (min-width: 576px)
+                font-size: 14px
+                margin-bottom: 20px
+            @media only screen and (min-width: 992px)
+                font-size: 16px
+                margin-bottom: 30px
+            @media only screen and (min-width: 1441px)
+                font-size: 18px
+        .txtLg
+            font-size: 16px
+            line-height: 1.4
+            font-weight: 700
+            color: $white
+            @media only screen and (min-width: 576px)
+                font-size: 18px
+            @media only screen and (min-width: 992px)
+                font-size: 20px
+            @media only screen and (min-width: 1200px)
+                font-size: 22px
+            @media only screen and (min-width: 1441px)
+                font-size: 25px
+        p
+            @extend .txt
+            &:last-child
+                margin-bottom: 0
+        .infoTxt
+            @extend .txt
+            font-weight: 400
+        ul, ol
+            padding-left: 0
+            margin: 0
+            margin-bottom: 10px
+            @media only screen and (min-width: 768px)
+                margin-bottom: 15px
+            @media only screen and (min-width: 992px)
+                margin-bottom: 20px
+            li
+                @extend .txt
+                margin: 5px 0
+                @media only screen and (min-width: 768px)
+                    margin: 10px 0
+                @media only screen and (min-width: 1441px)
+                    margin: 15px 0
+        ol
+            list-style: decimal
+        ul
+            margin-left: 15px
+            li
+                width: 100%
+                list-style: disc

@@ -1,0 +1,158 @@
+/************** ******* **************/
+/************* LEGAL_PAGES *************/
+/************** ******* **************/
+.legalPage
+    #Content
+        padding: 30px 0
+        @media only screen and (min-width: 576px)
+            padding: 40px 0
+        @media only screen and (min-width: 992px)
+            padding: 60px 0
+        @media only screen and (min-width: 1551px)
+            padding: 100px 0
+        .cntWrap
+            h1, h2, h3, h4, h5, h6
+                font-weight: 400
+                line-height: 1.1
+                letter-spacing: 0.04rem
+                font-family: $fontstack2
+                color: $text
+                margin: 15px 0
+                @media only screen and (min-width: 576px)
+                    margin: 20px 0
+                @media only screen and (min-width: 992px)
+                    margin: 30px 0
+            h1
+                font-size: 24px
+                @media only screen and (min-width: 468px)
+                    font-size: 26px
+                @media only screen and (min-width: 576px)
+                    font-size: 28px
+                @media only screen and (min-width: 768px)
+                    font-size: 36px
+                @media only screen and (min-width: 992px)
+                    font-size: 44px
+                @media only screen and (min-width: 1200px)
+                    font-size: 52px
+                @media only screen and (min-width: 1551px)
+                    font-size: 60px
+            h2, h3
+                font-size: 22px
+                @media only screen and (min-width: 576px)
+                    font-size: 24px
+                @media only screen and (min-width: 992px)
+                    font-size: 26px
+                @media only screen and (min-width: 1200px)
+                    font-size: 38px
+                @media only screen and (min-width: 1551px)
+                    font-size: 54px
+            h4, h5
+                font-size: 16px
+                @media only screen and (min-width: 576px)
+                    font-size: 18px
+                @media only screen and (min-width: 992px)
+                    font-size: 24px
+                @media only screen and (min-width: 1551px)
+                    font-size: 34px
+            h6
+                font-size: 13px
+                @media only screen and (min-width: 576px)
+                    font-size: 14px
+                @media only screen and (min-width: 992px)
+                    font-size: 16px
+            img
+                max-width: 100%
+                max-height: 100%
+                will-change: transform
+                margin-bottom: 15px
+                @include imgFit
+                @media only screen and ( min-width: 576px )
+                    margin-bottom: 20px
+                @media only screen and ( min-width: 992px )
+                    margin-bottom: 30px
+            .txt
+                font-size: 12px
+                line-height: 1.4
+                font-weight: 400
+                color: $text
+                margin-bottom: 15px
+                @media only screen and (min-width: 376px)
+                    font-size: 13px
+                @media only screen and (min-width: 576px)
+                    font-size: 14px
+                    margin-bottom: 20px
+                @media only screen and (min-width: 992px)
+                    font-size: 16px
+                    margin-bottom: 30px
+            .txtLg
+                font-size: 16px
+                line-height: 1.4
+                font-weight: 700
+                color: $white
+                @media only screen and (min-width: 576px)
+                    font-size: 18px
+                @media only screen and (min-width: 992px)
+                    font-size: 20px
+                @media only screen and (min-width: 1200px)
+                    font-size: 22px
+                @media only screen and (min-width: 1441px)
+                    font-size: 25px
+            p
+                @extend .txt
+            .infoTxt
+                @extend .txt
+                font-weight: 400
+            ul, ol
+                padding-left: 0
+                margin: 0
+                margin-bottom: 15px
+                @media only screen and (min-width: 768px)
+                    margin-bottom: 20px
+                @media only screen and (min-width: 992px)
+                    margin-bottom: 30px
+                li
+                    @extend .txt
+                    margin: 10px 0
+                    @media only screen and (min-width: 768px)
+                        margin: 15px 0
+                    @media only screen and (min-width: 1441px)
+                        margin: 20px 0
+            ol
+                list-style: decimal
+            ul
+                li
+                    width: 100%
+                    list-style-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='%23C88F2F'/%3E%3C/svg%3E%0A")
+                    list-style-position: inside
+            table
+                display: table
+                max-width: 100%
+                margin: 5px 0
+                border-collapse: collapse
+                border-top: 1px solid rgba($basecolor, 0.2)
+                border-left: 1px solid rgba($basecolor, 0.2)
+                @media only screen and (min-width: 576px)
+                    margin: 10px 0
+                @media only screen and (min-width: 992px)
+                    margin: 15px 0
+                th, td
+                    @extend .txt
+                    line-height: 1.2
+                    color: $black
+                    padding: 4px 5px
+                    border-right: 1px solid rgba($basecolor, 0.2)
+                    border-bottom: 1px solid rgba($basecolor, 0.2)
+                    @media only screen and (min-width: 576px)
+                        padding: 6px 10px
+                    @media only screen and (min-width: 992px)
+                        padding: 10px 15px
+                    @media only screen and (min-width: 1551px)
+                        padding: 15px 25px
+                th
+                    color: $white
+                    background-color: $basecolor
+                    border-color: rgba($white, 0.2)
+                tbody
+                    tr
+                        &:nth-child(even)
+                            background-color: rgba($basecolor, 0.1)

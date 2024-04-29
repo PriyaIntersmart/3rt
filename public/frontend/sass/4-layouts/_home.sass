@@ -1,0 +1,523 @@
+//HOME_PAGE
+/************** ******* **************/
+/************* HOME_PAGE *************/
+/************** ******* **************/
+#About
+    width: 100%
+    height: auto
+    position: relative
+    z-index: 0
+    padding: 30px 0 10px
+    @media only screen and (min-width: 576px)
+        padding: 30px 0 15px
+    @media only screen and (min-width: 992px)
+        padding: 40px 0 20px
+    @media only screen and (min-width: 1551px)
+        padding: 60px 0
+    .dElmtWrap
+        .dElmt
+            --bx-wh: 120px
+            width: calc(var(--bx-wh) / 1.5)
+            height: var(--bx-wh)
+            filter: blur(200px)
+            -webkit-filter: blur(200px)
+            -moz-filter: blur(200px)
+            -o-filter: blur(200px)
+            -ms-filter: blur(200px)
+            border-radius: 50%
+            background-color: rgba(#DFB03C, 0.5)
+            pointer-events: none
+            // opacity: 0.5
+            position: absolute
+            z-index: 2
+            bottom: calc((var(--bx-wh) / 3) * -1)
+            @media only screen and (min-width: 576px)
+                --bx-wh: 200px
+            @media only screen and (min-width: 992px)
+                --bx-wh: 300px
+            @media only screen and (min-width: 1551px)
+                --bx-wh: 500px
+            &:nth-child(1)
+                left: 0
+                border-radius: 0 50% 50% 0
+            &:nth-child(2)
+                right: 0
+                border-radius: 50% 0 0 50%
+    .dFlx
+        align-items: center
+        @include display
+        @media only screen and (min-width: 576px)
+            margin: 0 -10px
+        @media only screen and (min-width: 992px)
+            margin: 0 -20px
+        @media only screen and (min-width: 992px)
+            margin: 0 -30px
+        &>*
+            padding: 10px 0
+            @media only screen and (min-width: 576px)
+                padding: 10px
+            @media only screen and (min-width: 992px)
+                padding: 20px
+            @media only screen and (min-width: 1551px)
+                padding: 30px
+        &>.w100
+            width: 100%
+        &>.lftSd
+            width: 100%
+            @media only screen and (min-width: 768px)
+                width: 376px
+            @media only screen and (min-width: 992px)
+                width: 468px
+            @media only screen and (min-width: 1200px)
+                width: 576px
+            @media only screen and (min-width: 1551px)
+                width: 840px
+        &>.rgtSd
+            width: 100%
+            @media only screen and (min-width: 768px)
+                width: calc(100% - 376px)
+            @media only screen and (min-width: 992px)
+                width: calc(100% - 468px)
+            @media only screen and (min-width: 1200px)
+                width: calc(100% - 576px)
+            @media only screen and (min-width: 1551px)
+                width: calc(100% - 840px)
+    .cntWrap
+        @media only screen and (min-width: 576px)
+            padding: 15px
+        @media only screen and (min-width: 992px)
+            padding: 30px
+        @media only screen and (min-width: 1551px)
+            padding: 60px
+        p:last-of-type
+            margin: 0
+        .btnWrap
+            margin-top: 15px
+            @media only screen and (min-width: 576px)
+                margin-top: 20px
+            @media only screen and (min-width: 992px)
+                margin-top: 30px
+    .countSlide
+        .owl-stage-outer
+            overflow: visible
+            .owl-item
+                opacity: 0
+                visibility: hidden
+                &.active
+                    opacity: 1
+                    visibility: visible
+        .item
+            width: 100%
+            height: 100%
+        .countBx:hover
+            @media only screen and (min-width: 576px)
+                transform: translateY(4px)
+            @media only screen and (min-width: 992px)
+                transform: translateY(6px)
+            @media only screen and (min-width: 1551px)
+                transform: translateY(10px)
+    .dElmtImgWrap
+        --star-wh: 150px
+        width: 100%
+        max-width: 376px
+        height: 170px
+        margin: auto
+        position: relative
+        z-index: 0
+        @media only screen and (min-width: 576px)
+            max-width: 468px
+            height: 200px
+        @media only screen and (min-width: 768px)
+            max-width: 576px
+            height: 200px
+        @media only screen and (min-width: 992px)
+            max-width: 768px
+            height: 240px
+        @media only screen and (min-width: 1551px)
+            max-width: 840px
+            height: 350px
+        &:hover
+            &::after
+                animation-duration: 5s
+            img
+                transform: scale(1.1)
+        &::after
+            content: ""
+            position: absolute
+            z-index: 1
+            bottom: calc((var(--star-wh) / 3.5) * -1)
+            left: calc((var(--star-wh) / 3.5) * -1)
+            width: var(--star-wh)
+            height: var(--star-wh)
+            background: url(../images/star.png)
+            background-size: var(--star-wh)
+            animation: spin 10s infinite
+        &::before
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            z-index: -1
+            top: 0
+            left: 0
+            background: url(../images/dElmt-bg-about.png) no-repeat
+            background-size: contain
+            background-position: bottom
+            transform: scale(1.1)
+            opacity: 0.8
+        .imgWrap
+            width: 100%
+            height: 100%
+            -webkit-mask: url(../images/logoPattern.svg) no-repeat
+            mask: url(../images/logoPattern.svg) no-repeat
+            -webkit-mask-position: bottom left
+            mask-position: bottom left
+            -webkit-mask-repeat: no-repeat
+            mask-repeat: no-repeat
+            -webkit-mask-size: 100%
+            mask-size: 100%
+            &:hover
+                img
+                    transform: scale(1.1)
+        img
+            transition: all 0.5s
+            @include imgFit
+
+#Business
+    padding: 15px 0 60px
+    @media only screen and (min-width: 576px)
+        padding: 30px 0 80px
+    @media only screen and (min-width: 992px)
+        padding: 40px 0 120px
+    @media only screen and (min-width: 1551px)
+        padding: 70px 0 160px
+    .dFlx
+        align-items: center
+        @include display
+        @media only screen and (min-width: 576px)
+            margin: 0 -15px
+        @media only screen and (min-width: 992px)
+            margin: 0 -30px
+        @media only screen and (min-width: 992px)
+            margin: 0 -60px
+        &>*
+            padding: 10px 0
+            @media only screen and (min-width: 576px)
+                padding: 0 15px
+            @media only screen and (min-width: 992px)
+                padding: 0 30px
+            @media only screen and (min-width: 992px)
+                padding: 0 60px
+        &>.lftSd
+            width: 100%
+            @media only screen and (min-width: 576px)
+                width: 40%
+        &>.rgtSd
+            width: 100%
+            @media only screen and (min-width: 576px)
+                width: 60%
+    .imgWrapOuter
+        width: 100%
+        height: 100%
+        max-height: 576px
+        position: relative
+        z-index: 0
+        img
+            transition: transform 0.4s ease
+            @include imgFit
+        .imgWrap
+            width: 100%
+            height: 100%
+            overflow: hidden
+            &:hover
+                img
+                    transform: scale(1.1)
+        .dElmtWrap
+            .dElmt
+                position: absolute
+                z-index: 1
+                &:hover
+                    img
+                        transform: scale(1.1)
+            .logoOutline
+                width: 220px
+                height: auto
+                top: 100%
+                left: 0
+                transform: translate(-10%, -50%)
+                @media only screen and (min-width: 576px)
+                    width: 320px
+                @media only screen and (min-width: 992px)
+                    width: 376px
+                @media only screen and (min-width: 1551px)
+                    width: 520px
+            .gold
+                width: 176px
+                height: auto
+                top: 100%
+                right: 0
+                transform: translateY(-50%)
+                @media only screen and (min-width: 576px)
+                    width: 220px
+                @media only screen and (min-width: 992px)
+                    width: 240px
+                @media only screen and (min-width: 1551px)
+                    width: 376px
+    .cntWrap
+        p:last-of-type
+            margin: 0
+        .btnWrap
+            margin-top: 15px
+            margin-bottom: 10px
+            @media only screen and (min-width: 576px)
+                margin-top: 20px
+            @media only screen and (min-width: 992px)
+                margin-top: 30px
+
+#Location
+    width: 100%
+    height: auto
+    padding: 60px 0
+    position: relative
+    z-index: -1
+    @media only screen and (min-width: 576px)
+        padding: 80px 0
+    @media only screen and (min-width: 992px)
+        padding: 100px 0
+    @media only screen and (min-width: 1551px)
+        padding: 140px 0
+    @media only screen and (min-width: 1771px)
+        padding: 180px 0
+    &::after
+        content: ''
+        width: 100%
+        height: 100%
+        background: #050200
+        background: linear-gradient(270deg, rgba(#050200,1) 0%, rgba(#B57D2D,1) 100%)
+        opacity: 0.75
+        position: absolute
+        z-index: -1
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+    .bgImg, .jarallax-img
+        pointer-events: none
+        position: absolute
+        z-index: -1
+        top: 0
+        left: 0
+        @include imgFit
+    .tleWrap
+        margin-bottom: 15px
+        @media only screen and (min-width: 576px)
+            margin-bottom: 20px
+        @media only screen and (min-width: 992px)
+            margin-bottom: 40px
+        @media only screen and (min-width: 1551px)
+            margin-bottom: 60px
+        .mTle
+            color: $white
+    .cntWrap
+        width: 100%
+        max-width: 468px
+        height: auto
+        margin: auto
+        text-align: center
+        @media only screen and (min-width: 576px)
+            max-width: 576px
+        @media only screen and (min-width: 992px)
+            max-width: 768px
+        @media only screen and (min-width: 1551px)
+            max-width: 960px
+        .txt
+            font-size: 14px
+            line-height: 1.4
+            font-weight: 400
+            color: $white
+            @media only screen and (min-width: 576px)
+                font-size: 18px
+            @media only screen and (min-width: 992px)
+                font-size: 20px
+            @media only screen and (min-width: 1200px)
+                font-size: 24px
+            @media only screen and (min-width: 1551px)
+                font-size: 30px
+        p:last-of-type
+            margin: 0
+        p, li
+            @extend .txt
+        li
+            text-align: start
+
+#News
+    width: 100%
+    height: auto
+    position: relative
+    z-index: 0
+    padding: 40px 0
+    @media only screen and (min-width: 576px)
+        padding: 80px 0
+    @media only screen and (min-width: 992px)
+        padding: 100px 0
+    @media only screen and (min-width: 1551px)
+        padding: 130px 0
+    .dElmtWrap
+        .dElmt
+            --bx-wh: 120px
+            width: calc(var(--bx-wh) / 2)
+            height: var(--bx-wh)
+            filter: blur(160px)
+            -webkit-filter: blur(160px)
+            -moz-filter: blur(160px)
+            -o-filter: blur(160px)
+            -ms-filter: blur(160px)
+            border-radius: 50%
+            background-color: rgba(#DFB03C, 0.5)
+            pointer-events: none
+            position: absolute
+            z-index: 2
+            top: calc((var(--bx-wh) / 2) * -1)
+            @media only screen and (min-width: 576px)
+                --bx-wh: 200px
+            @media only screen and (min-width: 992px)
+                --bx-wh: 300px
+            @media only screen and (min-width: 1551px)
+                --bx-wh: 500px
+            &:nth-child(1)
+                left: 0
+                border-radius: 0 50% 50% 0
+    .dFlx
+        align-items: center
+        @include display
+        @media only screen and (min-width: 576px)
+            margin: 0 -5px
+        @media only screen and (min-width: 992px)
+            margin: 0 -10px
+        @media only screen and (min-width: 1441px)
+            margin: 0 -15px
+        &>*
+            padding: 10px 0
+            @media only screen and (min-width: 576px)
+                padding: 0 5px
+            @media only screen and (min-width: 992px)
+                padding: 0 10px
+            @media only screen and (min-width: 1441px)
+                padding: 0 15px
+        &>.lftSd
+            width: 100%
+            @media only screen and (min-width: 576px)
+                width: 240px
+            @media only screen and (min-width: 768px)
+                width: 280px
+            @media only screen and (min-width: 992px)
+                width: 340px
+            @media only screen and (min-width: 1441px)
+                width: 420px
+        &>.rgtSd
+            width: 100%
+            @media only screen and (min-width: 576px)
+                width: calc(100% - 240px)
+            @media only screen and (min-width: 768px)
+                width: calc(100% - 280px)
+            @media only screen and (min-width: 992px)
+                width: calc(100% - 340px)
+            @media only screen and (min-width: 1441px)
+                width: calc(100% - 420px)
+    .cntWrap
+        p:last-of-type
+            margin: 0
+        .btnWrap
+            margin-top: 15px
+            margin-bottom: 10px
+            @media only screen and (min-width: 576px)
+                margin-top: 20px
+            @media only screen and (min-width: 992px)
+                margin-top: 25px
+
+#GetTouch
+    width: 100%
+    height: auto
+    padding: 20px 0
+    background: #824D1F
+    background: linear-gradient(0deg, rgba(#824D1F,1) 0%, rgba(#B57D2D,0.7) 100%)
+    @media only screen and (min-width: 576px)
+        padding: 30px 0
+    @media only screen and (min-width: 992px)
+        padding: 40px 0
+    @media only screen and (min-width: 1441px)
+        padding: 50px 0
+    .dFlx
+        align-items: center
+        @include display
+        @media only screen and (min-width: 576px)
+            margin: 0 -15px
+        @media only screen and (min-width: 992px)
+            margin: 0 -30px
+        &>*
+            padding: 10px 0
+            @media only screen and (min-width: 576px)
+                padding: 0 15px
+            @media only screen and (min-width: 992px)
+                padding: 0 30px
+        &>.lftSd
+            width: 100%
+            @media only screen and (min-width: 576px)
+                width: 85%
+            @media only screen and (min-width: 992px)
+                width: 80%
+        &>.rgtSd
+            width: 100%
+            @media only screen and (min-width: 576px)
+                width: 15%
+            @media only screen and (min-width: 992px)
+                width: 20%
+    .cntWrap
+        align-items: center
+        @include display
+        @media only screen and (min-width: 576px)
+            flex-wrap: nowrap
+        .txt
+            font-size: 14px
+            line-height: 1.3
+            font-weight: 500
+            color: $white
+            transition: color 0.4s ease
+            @media only screen and (min-width: 576px)
+                font-size: 16px
+            @media only screen and (min-width: 992px)
+                font-size: 18px
+            @media only screen and (min-width: 1551px)
+                font-size: 20px
+        p:last-of-type
+            margin: 0
+        p, li
+            @extend .txt
+        li
+            text-align: start
+        .tleWrap
+            margin: 0
+            @media only screen and (min-width: 576px)
+                max-width: 420px
+                margin-right: 20px
+            @media only screen and (min-width: 992px)
+                margin-right: 40px
+            @media only screen and (min-width: 1551px)
+                margin-right: 60px
+            @media only screen and (min-width: 1771px)
+                margin-right: 80px
+            .mTle
+                color: $white
+                margin: 5px 0
+                @media only screen and (min-width: 576px)
+                    margin: 10px 0
+                @media only screen and (min-width: 992px)
+                    margin: 15px 0
+                @media only screen and (min-width: 1200px)
+                    margin: 20px 0
+                @media only screen and (min-width: 1551px)
+                    margin: 25px 0
+    .btnWrap
+        .baseBtn
+            @media only screen and (min-width: 576px)
+                margin-left: auto

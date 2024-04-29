@@ -1,0 +1,155 @@
+#pageBanner
+    position: relative
+    z-index: 0
+    height: 190px
+    @media only screen and (min-width:578px)
+        height: 250px
+    @media only screen and (min-width:992px)
+        height: 300px
+    @media only screen and (min-width:1200px)
+        height: 350px
+    @media only screen and (min-width:1441px)
+        height: 450px
+    @media only screen and (min-width:1551px)
+        height: 620px
+    &:before
+        position: absolute
+        top: 0
+        left: 0
+        background: rgba(0,0,0,0.2)
+        content: ''
+        width: 100%
+        height: 100%
+        z-index: 1
+
+    .imgBox
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        overflow: hidden
+        img
+            transition: all 0.5s
+            @include imgFit
+    .container
+        position: relative
+        display: flex
+        align-items: center
+        height: 100%
+        z-index: 1
+        @media only screen and (max-width:578px)
+            justify-content: center
+            text-align: center
+        .captionBx
+            position: relative
+            .title, h1
+                font-family: $fontstack2
+                color: $white
+                font-weight: 400
+                font-size: 32px
+                line-height: 1
+                margin-bottom: 0
+                @media only screen and (min-width:578px)
+                    font-size: 42px
+                @media only screen and (min-width:768px)
+                    font-size: 50px
+                @media only screen and (min-width:1200px)
+                    font-size: 60px
+                @media only screen and (min-width:1351px)
+                    font-size: 80px
+                @media only screen and (min-width:1441px)
+                    font-size: 90px
+                @media only screen and (min-width:1551px)
+                    font-size: 110px
+
+.mainHead
+    max-width: 1020px
+    margin: auto
+    margin-bottom: 20px
+    @media only screen and (min-width:1200px)
+        margin-bottom: 25px
+    @media only screen and (min-width:1441px)
+        margin-bottom: 35px
+    @media only screen and (min-width:1441px)
+        margin-bottom: 55px
+    &.center
+        text-align: center
+    .head
+        color: #2B6956
+        font-size: 18px
+        font-weight: 600
+        margin-bottom: 12px
+        @media only screen and (min-width:1200px)
+            font-size: 20px
+        @media only screen and (min-width:1551px)
+            font-size: 24px
+        &.upper
+            text-transform: uppercase
+    .title
+        color: #2E2E2E
+        font-weight: 400
+        font-family: $fontstack2
+        line-height: 30px
+        font-size: 25px
+        margin-bottom: 15px
+        @media only screen and (min-width:678px)
+            line-height: 35px
+            font-size: 30px
+        @media only screen and (min-width:1200px)
+            font-size: 35px
+            line-height: 40px
+            margin-bottom: 20px
+        @media only screen and (min-width:1351px)
+            font-size: 42px
+            line-height: 47px
+            margin-bottom: 30px
+        @media only screen and (min-width:1441px)
+            font-size: 48px
+            line-height: 48px
+        @media only screen and (min-width:1551px)
+            line-height: 50px
+            font-size: 50px
+        @media only screen and (min-width:1771px)
+            line-height: 60px
+            font-size: 60px
+        &.white
+            color: $white
+        &.upper
+            text-transform: uppercase
+
+    .subT
+        color: #2E2E2E
+        font-weight: 400 
+        font-size: 16px
+        @media only screen and (min-width:768px)
+            font-size: 18px
+        @media only screen and (min-width:992px)
+            font-size: 22px
+        @media only screen and (min-width:1200px)
+            font-size: 26px
+        @media only screen and (min-width:1351px)
+            font-size: 28px
+        @media only screen and (min-width:1441px)
+            font-size: 36px
+        span
+            color: #DFB03C
+.cmNtitle
+    font-size: 16px
+    font-weight: 400
+    color: #B47A19
+    font-family: $fontstack2
+    @media only screen and (min-width:768px)
+        font-size: 18px
+    @media only screen and (min-width:992px)
+        font-size: 22px
+    @media only screen and (min-width:1200px)
+        font-size: 26px
+    @media only screen and (min-width:1351px)
+        font-size: 28px
+    @media only screen and (min-width:1441px)
+        font-size: 36px
+    &.center
+        text-align: center
+    &.upper
+        text-transform: uppercase

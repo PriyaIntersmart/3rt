@@ -1,0 +1,113 @@
+//ANIMATIONS
+@keyframes fadeInDown
+    0%
+        opacity: 0
+        transform: translate3d(0, -100%, 0)
+
+    100%
+        opacity: 1
+        transform: translate3d(0, 0, 0)
+
+@keyframes spin
+    100%
+        -webkit-transform: rotate(360deg)
+        transform: rotate(360deg)
+
+@keyframes falling
+    0%
+        top: 0%
+        left: -10%
+        opacity: 0
+        -webkit-transform: rotateZ(0deg)
+    25%
+        top: 30%
+        left: 90%
+        opacity: 1
+    50%
+        top: 60%
+        left: 5%
+        -webkit-transform: rotateZ(360deg)
+    75%
+        top: 80%
+        left: 80%
+        opacity: 1
+    100%
+        top: 100%
+        left: 20%
+        opacity: 0
+        -webkit-transform: rotateZ(0deg)
+
+@keyframes waves
+    0%
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 1)
+    50%
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0)
+    100%
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0)
+
+@keyframes wobble-hor-bottom
+    0%,
+    100%
+        transform: translateX(0)
+        transform-origin: 50% 0
+
+    15%
+        transform: translateX(-4px) rotate(-6deg)
+
+    30%
+        transform: translateX(2px) rotate(6deg)
+
+    45%
+        transform: translateX(-2px) rotate(-3.6deg)
+
+    60%
+        transform: translateX(3px) rotate(2.4deg)
+
+    75%
+        transform: translateX(0px) rotate(-1.2deg)
+@keyframes toTopFromBottom
+    49%
+        transform: translate(-100%, 0)
+
+    50%
+        opacity: 0
+        transform: translate(-50%, 0)
+
+    51%
+        opacity: 1
+
+@keyframes rotation
+    0%
+        transform: scaleX(-1) rotate(360deg)
+    100%
+        transform: scaleX(-1) rotate(0deg)
+
+@keyframes vibrate
+    0%
+        -webkit-transform: translate(0)
+        transform: translate(0)
+
+    20%
+        -webkit-transform: translate(-2px, 2px)
+        transform: translate(-2px, 2px)
+
+    40%
+        -webkit-transform: translate(-2px, -2px)
+        transform: translate(-2px, -2px)
+
+    60%
+        -webkit-transform: translate(2px, 2px)
+        transform: translate(2px, 2px)
+
+    80%
+        -webkit-transform: translate(2px, -2px)
+        transform: translate(2px, -2px)
+
+    100%
+        -webkit-transform: translate(0)
+        transform: translate(0)
+ 
+
+@keyframes shine
+    100%
+        left: 125%

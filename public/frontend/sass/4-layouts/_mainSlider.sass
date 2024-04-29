@@ -1,0 +1,165 @@
+// MAINSLIDER
+/************** ******* **************/
+/************* MAINSLIDER *************/
+/************** ******* **************/
+#MainBanner
+    width: 100%
+    height: auto
+    overflow: hidden
+    position: relative
+    z-index: 0
+    #bannerCarousel
+        .carousel-inner
+            .carousel-item
+                height: 320px
+                padding: 20px 0
+                position: relative
+                z-index: 0
+                @media only screen and (min-width: 576px)
+                    height: calc(var(--app-height) - 100px)
+                    padding: 40px 0
+                @media only screen and (min-width: 992px)
+                    height: calc(var(--app-height) - 140px)
+                    min-height: 520px
+                    padding: 60px 0
+                @media only screen and (min-width: 1441px)
+                    height: calc(var(--app-height) - 180px)
+                    min-height: 576px
+                    padding: 80px 0
+                &:not(.active)
+                    .cntWrap
+                        &>*
+                            transform: translateY(100%)
+                            opacity: 0
+                &.active
+                    .cntWrap
+                        &>*
+                            opacity: 1
+                            transform: none
+                            transition: transform 0.4s ease
+    .container
+        height: 100%
+    .dFlx
+        height: 100%
+        position: relative
+        z-index: 0
+        align-items: center
+        @include display
+        &>.fullSd
+            width: 100%
+        &>.lftSd
+            width: 100%
+            @media only screen and (min-width: 992px)
+                width: 60%
+        &>.rgtSd
+            width: 100%
+            @media only screen and (min-width: 992px)
+                width: 40%
+    .bgImgWrap
+        width: 100%
+        height: 100%
+        position: absolute
+        z-index: -1
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        img, picture, video
+            @include imgFit
+        .dsk
+            display: none
+            @media only screen and (min-width: 468px)
+                display: block
+        .mob
+            display: block
+            @media only screen and (min-width: 468px)
+                display: none
+    .cntWrap
+        width: 100%
+        height: auto
+        position: relative
+        z-index: 1
+        &>*
+            color: $white
+            margin: 10px 0
+            transition: all 0.4s ease
+            @media only screen and (min-width: 576px)
+                margin: 15px 0
+            @media only screen and (min-width: 992px)
+                margin: 20px 0
+            @media only screen and (min-width: 1551px)
+                margin: 30px 0
+        .mHead
+            font-size: 28px
+            line-height: 1
+            font-family: $fontstack2
+            font-weight: 400
+            @media only screen and (min-width: 468px)
+                font-size: 30px
+            @media only screen and (min-width: 576px)
+                font-size: 34px
+            @media only screen and (min-width: 768px)
+                font-size: 48px
+            @media only screen and (min-width: 992px)
+                font-size: 64px
+            @media only screen and (min-width: 1200px)
+                font-size: 78px
+            @media only screen and (min-width: 1551px)
+                font-size: 110px
+        .sHead
+            font-size: 14px
+            line-height: 1.4
+            font-weight: 400
+            @media only screen and (min-width: 576px)
+                font-size: 18px
+            @media only screen and (min-width: 992px)
+                font-size: 22px
+            @media only screen and (min-width: 1200px)
+                font-size: 26px
+            @media only screen and (min-width: 1551px)
+                font-size: 30px
+            @media only screen and (min-width: 576px)
+                max-width: 468px
+            @media only screen and (min-width: 992px)
+                max-width: 620px
+            @media only screen and (min-width: 1551px)
+                max-width: 720px
+    .carousel-indicators
+        height: 100%
+        margin: 0
+        padding: 15px
+        z-index: 0
+        left: auto
+        justify-content: flex-end
+        align-items: center
+        display: none
+        @media only screen and (min-width: 576px)
+            display: flex
+            padding: 30px
+        @media only screen and (min-width: 992px)
+            padding: 60px
+        .carousel-indicatorsWrap
+            flex-direction: column
+            @include display
+        button
+            width: 4px
+            height: 4px
+            opacity: 0.3
+            will-change: transform
+            border-radius: 50%
+            background: $white
+            border: 1px solid $white
+            margin: 4px
+            transition: all 0.4s ease
+            position: relative
+            z-index: 0
+            @media only screen and (min-width: 576px)
+                width: 5px
+                height: 5px
+                margin: 8px
+            @media only screen and (min-width: 992px)
+                width: 6px
+                height: 6px
+                margin: 10px
+            &.active
+                opacity: 1
