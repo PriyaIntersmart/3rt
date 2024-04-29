@@ -87,6 +87,11 @@ class AddressController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $address=Address::find($id);
+        if ($address->delete()) {
+            return to_route('address-management.index')->with('success', 'Address  deleted successfully!');
     }
+
+    return to_route('address-management.index')->with('error', 'Failed to delete Address !');
+}
 }
