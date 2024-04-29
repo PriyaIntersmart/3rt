@@ -38,7 +38,7 @@
 
       <li class="nav-item">
           <a class="nav-link collapsed" data-bs-target="#about_nav" data-bs-toggle="collapse" href="#">
-              <i class="ri-home-2-fill"></i><span>ABOUT</span><i class="bi bi-chevron-down ms-auto"></i>
+              <i class="bi bi-journal-text"></i><span>ABOUT</span><i class="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="about_nav"
               class="nav-content collapse {{ Nav::isRoute(['about-cms.edit', 'team-management.index','team-management.create','team-management.edit', 'mining_cms.edit', 'mining-process.index',
@@ -75,7 +75,7 @@
 
       <li class="nav-item">
           <a class="nav-link collapsed" data-bs-target="#structure_nav" data-bs-toggle="collapse" href="#">
-              <i class="ri-home-2-fill"></i><span>Structure OverView</span><i class="bi bi-chevron-down ms-auto"></i>
+              <i class="bi bi-menu-button-wide"></i><span>Structure OverView</span><i class="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="structure_nav" class="nav-content collapse {{ Nav::isRoute(['key-element.index','structure-overview.edit'], 'show') }}"
               data-bs-parent="#sidebar-nav">
@@ -100,7 +100,7 @@
 
       <li class="nav-item">
           <a class="nav-link collapsed" data-bs-target="#contact-nav" data-bs-toggle="collapse" href="#">
-              <i class="ri-home-2-fill"></i><span>CONTACT</span><i class="bi bi-chevron-down ms-auto"></i>
+              <i class="bi bi-envelope"></i><span>CONTACT</span><i class="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="contact-nav" class="nav-content collapse {{ Nav::isRoute(['location.index','location.create',
         'location.edit'], 'show') }}"
@@ -120,7 +120,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#newsevents" data-bs-toggle="collapse" href="#">
-            <i class="ri-home-2-fill"></i><span>NewsEvents</span><i class="bi bi-chevron-down ms-auto"></i>
+            <i class="bi bi-newspaper"></i><span>NewsEvents</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="newsevents" class="nav-content collapse {{ Nav::isRoute(['news-events.index','news-events-cms.edit'], 'show') }}"
             data-bs-parent="#sidebar-nav">

@@ -267,7 +267,7 @@ display: block;
 
         <label><input type="checkbox">Remember Me</label>
 
-        <label for="forgotForm">Forgot Password</label>
+        {{-- <label for="forgotForm">Forgot Password</label> --}}
 
       </div>
 
