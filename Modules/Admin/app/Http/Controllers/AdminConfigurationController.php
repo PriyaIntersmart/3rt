@@ -47,8 +47,8 @@ class AdminConfigurationController extends Controller
     */
    public function edit()
    {
-       $configuration =AdminConfiguration::first();
-       return view('admin::admin-config.edit',compact('configuration'));
+       $config =AdminConfiguration::first();
+       return view('admin::admin-config.edit',compact('config'));
    }
 
    /**
@@ -56,10 +56,10 @@ class AdminConfigurationController extends Controller
     */
    public function update(Request $request, $id)
    {
-       $configuration = AdminConfiguration::find($id);
-       $configuration->value           = $request->value;
+       $config = AdminConfiguration::find($id);
+       $config->value           = $request->value;
 
-       if ($configuration->save()) {
+       if ($config->save()) {
         return to_route('admin-config.index')->with('success', ' Admin configuration updated successfully!');
     }
 

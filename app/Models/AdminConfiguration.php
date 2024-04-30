@@ -10,7 +10,7 @@ class AdminConfiguration extends Model
 {
     use HasFactory;
 
-    public function getImageAttribute()
+    public function getImageValueAttribute()
     {
         return Storage::disk('public')->exists($this->value) ? Storage::url($this->value) : asset($this->value);
     }

@@ -7,6 +7,7 @@ use App\Models\Address;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Modules\Admin\Http\Requests\AddressRequest;
 
 class AddressController extends Controller
 {
@@ -30,7 +31,7 @@ class AddressController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(AddressRequest $request)
     {
         $data = $request->all();
 
@@ -60,7 +61,7 @@ class AddressController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(AddressRequest $request, $id)
     {
        $address=Address::find(base64_decode($id));
 

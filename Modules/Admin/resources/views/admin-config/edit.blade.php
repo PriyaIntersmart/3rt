@@ -2,36 +2,57 @@
 @section('title', 'Edit Admin Configuration')
 @section('content')
     <!-- form start -->
-    @if($errors->any())
-    {{ implode('', $errors->all('<div>:message</div>')) }}
-@endif
-<div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <h5 class="card-header bg-light-subtle">Edit Configurations:
-            </h5>
-            <div class="card-body">
-                <form method="POST" action="{{ route('admin-config.update', $configuration->id) }}">
-                    @csrf
-                    @method('PUT')
+    @if ($errors->any())
+        {{ implode('', $errors->all('<div>:message</div>')) }}
+    @endif
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label for="value" class="form-label">Value</label>
-                                <input type="text" name="value" id="value"
-                                    class="form-control @error('value') is-invalid @enderror"
-                                    value="{{ old('value', $configuration->value) }}">
-                                @error('value')
-                                    <span class="invalid-feedback">{{ $message }}</span>
-                                @enderror
-                            </div>
+                        <div class="col-md-6">
+                            <input type="hidden" name="type" value="{{ $config->type }}">
+                            @if ($config->type == 0)
+                                <div class="form-group">
+                                    <label for="value">Value</label>
+                                    <input type="text" class="form-control @error('value') is-invalid @enderror"
+                                        id="value" name="value" placeholder="Enter Value"
+                                        value="{{ old('value', $config->value) }}">
+                                    @error('value')
+                                        <span class="invalid-feedback">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            @elseif ($config->type == 1)
+                                <div class="form-group">
+                                    <label for="value">Image</label>
+                                    <input type="file" name="value" id="value"
+                                        accept="image/jpeg,image/png,image/webp,image/jpg,image/svg+xml"
+                                        class="form-control multiple-file-input @error('value') is-invalid @enderror">
+                                    @error('value')
+                                        <span class="invalid-feedback">{{ $message }}</span>
+                                    @enderror
+                                    <div class="multipleFilePreview pl-1 pt-1">
+                                        @if ($config->value)
+                                            <img src="{{ Storage::disk('public')->exists($config->value) ? Storage::url($config->value) : asset($config->value) }}" alt="Uploaded Image"
+                                                id="uploadedImage" class="uploaded-file"
+                                                onerror="this.onerror=null;this.src='';this.height='';this.width='';">
+                                        @endif
+                                    </div>
+                                @elseif ($config->type == 2)
+                                    <div class="form-group">
+                                        <label for="value">Value</label>
+                                        <input type="color" class="form-control @error('value') is-invalid @enderror"
+                                            id="value" name="value" value="{{ old('value', $config->value) }}">
+                                        @error('value')
+                                            <span class="invalid-feedback">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                            @endif
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="submitBtn">Update</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 @endsection
