@@ -9,6 +9,7 @@ use Modules\Backend\Http\Controllers\AddressController;
 use Modules\Backend\Http\Controllers\AdminConfigurationController;
 use Modules\Backend\Http\Controllers\AuthController;
 use Modules\Backend\Http\Controllers\AuthenticateController;
+use Modules\Backend\Http\Controllers\AuthenticationController;
 use Modules\Backend\Http\Controllers\BannerAndMetaTagController;
 use Modules\Backend\Http\Controllers\CommonFunctionController;
 use Modules\Backend\Http\Controllers\ContactusController;
@@ -43,9 +44,9 @@ use Modules\Backend\Http\Controllers\TermsAndConditionController;
  * @author Priya
  */
 Route::prefix('3RT-admin-portal')->group(function () {
-    Route::get('login', [AuthenticateController::class, 'showLoginForm'])->name('admin.login.form');
-    Route::post('login', [AuthenticateController::class, 'login'])->name('admin.login');
-    Route::post('logout', [AuthenticateController::class, 'logout'])->name('admin.logout');
+    Route::get('login', [AuthenticationController::class, 'showLoginForm'])->name('admin.login.form');
+    Route::post('login', [AuthController::class, 'login'])->name('admin.login');
+    Route::post('logout', [AuthController::class, 'logout'])->name('admin.logout');
     Route::group(['middleware' => 'auth:admin'], function () {
         // dashboard
         Route::get('/', function () {
