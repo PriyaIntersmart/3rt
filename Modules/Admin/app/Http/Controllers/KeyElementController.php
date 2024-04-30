@@ -63,8 +63,9 @@ class KeyElementController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(KeyElementsRequest $request, KeyElement $key_element)
+    public function update(KeyElementsRequest $request, $key_element)
     {
+       
         $data = $request->all();
 
 

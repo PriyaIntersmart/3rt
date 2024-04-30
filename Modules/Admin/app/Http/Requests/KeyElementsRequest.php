@@ -15,15 +15,9 @@ class KeyElementsRequest extends FormRequest
             $rules = [
                 'title' => 'required|max:255',
                 'logo_image' => 'nullable|image|mimes:png,jpg,webp,jpeg|max:1024',
-                'description'=>'required|max:30',
+                'description'=>'required|max:150',
                 'sort_order' => 'integer|min:0',
             ];
-
-            if (in_array($this->method(), ['PUT', 'PATCH'])) {
-                $rules['title'] = 'required|max:255';
-                $rules['sort_order'] = 'integer|min:0';
-                $rules['description'] = 'required|max:z30';
-            }
 
             return $rules;
         }
