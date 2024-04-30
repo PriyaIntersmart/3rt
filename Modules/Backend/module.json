@@ -6,6 +6,7 @@
     "priority": 0,
     "providers": [
         "Modules\\Backend\\App\\Providers\\BackendServiceProvider"
+
     ],
     "files": []
 }

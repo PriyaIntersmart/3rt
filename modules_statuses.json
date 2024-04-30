@@ -1,4 +1,5 @@
 {
-    "Backend": true,
-    "Frontend": true
+    "Backend": false,
+    "Frontend": true,
+    "Admin": true
 }
