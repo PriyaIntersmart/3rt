@@ -12,7 +12,9 @@ class RouteServiceProvider extends ServiceProvider
      *
      * Register any model bindings or pattern based filters.
      */
-    public function boot(): void
+
+     protected $namespace = 'Modules\\Backend\\Http\\Controllers';
+     public function boot(): void
     {
         parent::boot();
     }
@@ -34,7 +36,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes(): void
     {
-        Route::middleware('web')->group(module_path('Backend', '/routes/web.php'));
+        Route::middleware('web')->namespace($this->namespace)->group(module_path('Backend', '/routes/web.php'));
     }
 
     /**
