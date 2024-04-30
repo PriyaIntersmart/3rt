@@ -14,7 +14,7 @@ class KeyElementsRequest extends FormRequest
 
             $rules = [
                 'title' => 'required|max:255',
-                'logo_image' => 'nullable|image|mimes:png,jpg,webp,jpeg|max:1024',
+                'logo_image' => 'nullable|image|mimes:png,jpg,webp,jpeg,|max:1024',
                 'description'=>'required|max:150',
                 'sort_order' => 'integer|min:0',
             ];

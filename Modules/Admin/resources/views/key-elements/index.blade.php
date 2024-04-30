@@ -31,7 +31,7 @@
                             @forelse($key_elements as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="{{ $item->image_value }}"></td>
+                                    <td><img src="{{ $item->image_value }}" width="100" height="50"></td>
                                     <td>{{ $item->title }}</td>
                                     <td>
                                         <input type="text"
