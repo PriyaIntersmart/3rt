@@ -7,6 +7,7 @@ use App\Models\NewsEvents;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Modules\Admin\Http\Requests\NewsEventsRequest;
 
 class NewsEventsController extends Controller
 {
@@ -30,7 +31,7 @@ class NewsEventsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(NewsEventsRequest $request)
     {
         $data = $request->all();
 
@@ -61,7 +62,7 @@ class NewsEventsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(NewsEventsRequest $request, $id)
     {
         $news_events=NewsEvents::find(base64_decode($id));
         $news_events->title=$request->title;

@@ -12,7 +12,10 @@ class NewsEventsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title'=>'required',
+            'description' => 'max:800',
+            'image' => 'nullable|image|mimes:png,jpg,webp,jpeg,|max:1024',
+
         ];
     }
 

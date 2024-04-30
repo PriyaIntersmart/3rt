@@ -15,7 +15,7 @@
                   <i class="ri-home-2-fill"></i><span>HOME</span><i class="bi bi-chevron-down ms-auto"></i>
               </a>
               <ul id="tables-nav"
-                  class="nav-content collapse {{ Nav::isRoute(['home-cms.edit', 'home-banner.edit'], 'show') }}"
+                  class="nav-content collapse {{ Nav::isRoute(['home-cms.edit', 'home-banner.edit','count-setting.index','count-setting.edit'], 'show') }}"
                   data-bs-parent="#sidebar-nav">
                   <li>
                   <li>
@@ -28,7 +28,7 @@
                   </a>
           </li>
           <li>
-            <a href="{{ route('count-setting.index') }}" class="{{ Nav::isRoute('count-setting.index') }}">
+            <a href="{{ route('count-setting.index') }}" class="{{ Nav::isResource('count-setting') }}">
                 <i class="bi bi-circle"></i><span>Count Managment</span>
             </a>
         </li>
@@ -77,11 +77,11 @@
           <a class="nav-link collapsed" data-bs-target="#structure_nav" data-bs-toggle="collapse" href="#">
               <i class="bi bi-menu-button-wide"></i><span>Structure OverView</span><i class="bi bi-chevron-down ms-auto"></i>
           </a>
-          <ul id="structure_nav" class="nav-content collapse {{ Nav::isRoute(['key-element.index','structure-overview.edit'], 'show') }}"
+          <ul id="structure_nav" class="nav-content collapse {{ Nav::isRoute(['key-element.index','structure-overview.edit','key-element.index','key-element.edit'], 'show') }}"
               data-bs-parent="#sidebar-nav">
 
               <li>
-                  <a href="{{ route('key-element.index') }}" class="{{ Nav::isRoute('key-element.index') }}">
+                  <a href="{{ route('key-element.index') }}" class="{{ Nav::isResource('key-element') }}">
                       <i class="bi bi-circle"></i><span>Key Element Management</span>
                   </a>
               </li>
@@ -102,13 +102,11 @@
           <a class="nav-link collapsed" data-bs-target="#contact-nav" data-bs-toggle="collapse" href="#">
               <i class="bi bi-envelope"></i><span>CONTACT</span><i class="bi bi-chevron-down ms-auto"></i>
           </a>
-          <ul id="contact-nav" class="nav-content collapse {{ Nav::isRoute(['location.index','location.create',
-        'location.edit'], 'show') }}"
+          <ul id="contact-nav" class="nav-content collapse {{ Nav::isResource('location', 'show') }}"
               data-bs-parent="#sidebar-nav">
               <li>
               <li>
-                  <a href="{{ route('location.index') }}" class="{{ Nav::isRoute(['location.index','location.create',
-                  'location.edit']) }}">
+                  <a href="{{ route('location.index') }}" class="{{ Nav::isResource('location') }}">
                       <i class="bi bi-circle"></i><span>Location Management</span>
                   </a>
               </li>
@@ -122,11 +120,11 @@
         <a class="nav-link collapsed" data-bs-target="#newsevents" data-bs-toggle="collapse" href="#">
             <i class="bi bi-newspaper"></i><span>NewsEvents</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="newsevents" class="nav-content collapse {{ Nav::isRoute(['news-events.index','news-events-cms.edit'], 'show') }}"
+        <ul id="newsevents" class="nav-content collapse {{ Nav::isResource('news-events', 'show') }}"
             data-bs-parent="#sidebar-nav">
             <li>
             <li>
-                <a href="{{ route('news-events.index') }}" class="{{ Nav::isRoute('news-events.index') }}">
+                <a href="{{ route('news-events.index') }}" class="{{ Nav::isResource('news-events') }}">
                     <i class="bi bi-circle"></i><span>News Management</span>
                 </a>
             </li>
