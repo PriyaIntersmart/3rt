@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use App\Traits\ImageTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
 class HomeCms extends Model
 {
-    use HasFactory;
+    use HasFactory,ImageTrait;
 
 
     protected $fileDirectory = 'Home-cms';
