@@ -68,6 +68,11 @@
                       <i class="bi bi-circle"></i><span>Mining Process</span>
                   </a>
               </li>
+              <li>
+                <a href="{{ route('tokenization.edit') }}" class="{{ Nav::isRoute('tokenization.edit') }}">
+                    <i class="bi bi-circle"></i><span>Tokeniztation</span>
+                </a>
+            </li>
 
 
       </li>

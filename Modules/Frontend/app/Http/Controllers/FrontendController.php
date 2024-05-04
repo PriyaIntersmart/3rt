@@ -17,6 +17,7 @@ use App\Models\NewsEventsCms;
 use App\Models\StructureCms;
 use App\Models\TeamMember;
 use App\Models\TermsAndCondition;
+use App\Models\Tokenization;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -73,8 +74,10 @@ class FrontendController extends Controller
     {
         $bannerandmeta = BannerAndMetaTag::find(2);
         $structure_cms = StructureCms::first();
+        $tokenization= Tokenization::first();
         $key_elements = KeyElement::orderBy('sort_order')->active()->get();
-        return view('frontend::structureoverview', compact('bannerandmeta', 'structure_cms', 'key_elements'));
+        return view('frontend::structureoverview',
+        compact('bannerandmeta', 'structure_cms', 'key_elements','tokenization'));
 
     }
 

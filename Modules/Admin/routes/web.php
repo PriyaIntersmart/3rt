@@ -26,6 +26,7 @@ use Modules\Admin\Http\Controllers\SiteCommonContentController;
 use Modules\Admin\Http\Controllers\StructureCmsController;
 use Modules\Admin\Http\Controllers\TeamController;
 use Modules\Admin\Http\Controllers\TermsAndConditionController;
+use Modules\Admin\Http\Controllers\TokenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,6 +107,10 @@ Route::prefix('3RT-admin-portal')->group(function () {
         Route::resource('/address-management', AddressController::class);
 
         Route::resource('/count-setting', CountController::class);
+
+        Route::get('/tokenization/edit',[TokenController::class,'edit'])->name('tokenization.edit');
+        Route::put('/tokenization/edit/{id}',[TokenController::class,'update'])->name('tokenization.update');
+
     });
 
 

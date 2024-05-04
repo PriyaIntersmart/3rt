@@ -93,16 +93,16 @@
                     <div class="assetBx">
                         <div class="bxWrap">
                             <div class="itemWrap">
-                                <h6>Gaming</h6>
-                                <h5>Art</h5>
-                                <h4>Infrastructure</h4>
-                                <h3>Public Equity</h3>
-                                <h2>Real Estate</h2>
-                                <h6>Financial</h6>
-                                <h6>Residential</h6>
-                                <h6>Energy</h6>
-                                <h5>Development</h5>
-                                <h3>Commodities</h3>
+                                  {!! $tokenization->title_one !!}
+                                  {!! $tokenization->title_two !!}
+                                  {!! $tokenization->title_three !!}
+                                  {!! $tokenization->title_four !!}
+                                  {!! $tokenization->title_five !!}
+                                  {!! $tokenization->title_six !!}
+                                  {!! $tokenization->title_seven !!}
+                                  {!! $tokenization->title_eight !!}
+                                  {!! $tokenization->title_nine !!}
+                                  {!! $tokenization->title_ten !!}
                             </div>
                         </div>
                     </div>
