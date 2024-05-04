@@ -55,7 +55,7 @@
                 </div>
                 <div class="Col">
                     <div class="itemWrap">
-                        <a href="index1.php" class="logoWrap" aria-label="Logo">
+                        <a href="{{ route('index') }}" class="logoWrap" aria-label="Logo">
                             <img src="@themeSettings('website_logo')" width="230" height="100" alt="logo">
                         </a>
                     </div>
