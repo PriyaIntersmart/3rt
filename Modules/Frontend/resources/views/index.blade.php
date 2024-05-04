@@ -79,7 +79,7 @@
                 <div class="rgtSd">
                     <div class="cntWrap">
                         <div class="tleWrap">
-                            <h2 class="mTle">{{ $home_cms->section_one_title }}</h2>
+                            <h2 class="mTle">{!! $home_cms->section_one_title !!}</h2>
                             <div class="sTle">{!! $home_cms->section_one_subtitle !!}.</div>
                         </div>
                         {!! $home_cms->section_one_description !!}
@@ -162,7 +162,7 @@
         <div class="container">
             <div class="cntWrap">
                 <div class="tleWrap center">
-                    <h2 class="mTle">{{ $home_cms->section_three_title }}</h2>
+                    <h2 class="mTle">{!! $home_cms->section_three_title !!}</h2>
                 </div>
                 {!! $home_cms->section_three_description !!}
             </div>
@@ -178,7 +178,7 @@
                 <div class="lftSd">
                     <div class="cntWrap">
                         <div class="tleWrap">
-                            <h2 class="mTle">{{ $news_events_cms->title }}</h2>
+                            <h2 class="mTle">{!! $news_events_cms->title !!}</h2>
                         </div>
                         {!! $news_events_cms->description !!}
                         <div class="btnWrap">
@@ -223,7 +223,7 @@
                 <div class="lftSd">
                     <div class="cntWrap">
                         <div class="tleWrap">
-                            <div class="mTle">{{ $home_cms->section_four_title }}</div>
+                            <div class="mTle">{!! $home_cms->section_four_title !!}</div>
                         </div>
                        {!! $home_cms->section_four_description !!}
                     </div>
