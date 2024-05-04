@@ -60,10 +60,7 @@
                         </a>
                     </div>
                     <div class="itemWrap">
-                        <p class="ftTxt">3RT Smart Gold Holdings
-                            is a forward thinking and
-                            innovative gold exploration
-                            company in Canada</p>
+                        <p class="ftTxt"> {!!$siteCommon->address  !!}</p>
                     </div>
                 </div>
             </div>
