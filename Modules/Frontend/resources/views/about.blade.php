@@ -24,7 +24,7 @@
     <section id="about">
         <div class="container">
             <div class="mainHead center">
-                <div class="title">{{ $about_cms->title }}</div>
+                <div class="title">{!! $about_cms->title !!}</div>
                 <div class="subT">{!! $about_cms->subtitle !!}</div>
             </div>
            @isset($about_cms->aboutUs_value)
@@ -82,7 +82,7 @@
                     <div class="content">
                         <div class="mainHead">
                             <div class="title">
-                               {{ $about_cms->work_overview_title }}
+                               {!! $about_cms->work_overview_title !!}
                             </div>
                         </div>
                        {!! $about_cms->work_overview_description !!}
@@ -139,8 +139,8 @@
     <section id="mining">
         <div class="container">
             <div class="mainHead center">
-                <div class="title">{{ $minior_cms->title }}</div>
-                {{ $minior_cms->subtitle }}
+                <div class="title">{!! $minior_cms->title !!}</div>
+                {!! $minior_cms->subtitle !!}
             </div>
             <div class="miningSlider owl-carousel">
                 @foreach ($minior_process as $item)
@@ -151,7 +151,7 @@
                                 <div class="bgBorder">
                                     <div class="contentBx">
                                         <div class="cnWrp">
-                                            <div class="title">{{ $item->title }}</div>
+                                            <div class="title">{!! $item->title !!}</div>
                                             {!! $item->description !!}
 
                                         </div>
@@ -174,12 +174,12 @@
     <section id="team">
         <div class="container">
             <div class="mainHead center">
-                <div class="title upper">{{ $about_cms->section_one_heading }}</div>
+                <div class="title upper">{!! $about_cms->section_one_heading !!}</div>
             </div>
             <div class="teamList">
 
                 <div class="item">
-                    <div class="cmNtitle center upper">{{ $about_cms->section_one_subheading }}</div>
+                    <div class="cmNtitle center upper">{!! $about_cms->section_one_subheading !!}</div>
                     <div class="teamSlider owl-carousel">
                         @foreach($team_member as $member)
                         <div class="item">
@@ -205,7 +205,7 @@
                 @endif
                 @if(!$senior_member->isEmpty())
                 <div class="item">
-                    <div class="cmNtitle center upper">{{ $about_cms->section_two_heading }}</div>
+                    <div class="cmNtitle center upper">{!! $about_cms->section_two_heading !!}</div>
                     <div class="teamSlider owl-carousel">
 
                         @foreach ($senior_member as $senior)
