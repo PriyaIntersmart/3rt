@@ -89,10 +89,13 @@ class FrontendController extends Controller
     {
         $bannerandmeta = BannerAndMetaTag::find(4);
         $newsandevents = NewsEvents::where('slug', $slug)->first();
-        $related_news = NewsEvents::where('id', '!=', $newsandevents->id)
-            ->limit(8)
-            ->get();
-        return view('frontend::newsdetails', compact('newsandevents', 'bannerandmeta', 'related_news'));
-
+        if($newsandevents) {
+            $related_news = NewsEvents::where('id', '!=', $newsandevents->id)
+                ->limit(8)
+                ->get();
+            return view('frontend::newsdetails', compact('newsandevents', 'bannerandmeta', 'related_news'));
+        } else {
+            abort(404);
+        }
     }
 }
