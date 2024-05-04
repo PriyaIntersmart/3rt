@@ -13,7 +13,6 @@ class NewsEventsRequest extends FormRequest
     {
         return [
             'title'=>'required',
-            'description' => 'max:800',
             'image' => 'nullable|image|mimes:png,jpg,webp,jpeg,|max:1024',
 
         ];
