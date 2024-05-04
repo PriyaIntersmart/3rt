@@ -14,6 +14,7 @@ class BannerRequest extends FormRequest
         return [
             'title' => 'required|min:3|max:80',
             'subtitle' => 'required|min:3|max:150',
+            'button_title'=>'required'
 
         ];
     }
