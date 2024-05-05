@@ -7,6 +7,7 @@ use App\Models\KeyTrends;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Modules\Admin\Http\Requests\KeyTrendRequest;
 
 class KeyTrendController extends Controller
 {
@@ -23,7 +24,7 @@ class KeyTrendController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(KeyTrendRequest $request, $id)
     {
         $key_element=KeyTrends::find($id);
         $key_element->title=$request->title;
