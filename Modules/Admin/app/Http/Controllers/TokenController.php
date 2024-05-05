@@ -7,6 +7,7 @@ use App\Models\Tokenization;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Modules\Admin\Http\Requests\TokenRequest;
 
 class TokenController extends Controller
 {
@@ -20,7 +21,7 @@ class TokenController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(TokenRequest $request, $id)
     {
       $tokenization=Tokenization::find($id);
       $tokenization->title_one=$request->title_one;

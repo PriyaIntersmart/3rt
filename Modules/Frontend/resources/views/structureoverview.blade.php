@@ -60,11 +60,11 @@
                         <div class="graphWrap">
                             <div class="graRow">
                                 <div class="item">
-                                    <div class="graThumb" style="height: 30%">$0.4</div>
+                                    <div class="graThumb" style="height: 30%">${{ $key_trends->starting_value }}</div>
                                 </div>
                                 <div class="item">
                                     <div class="graGap">
-                                        <span>CAGR: 60%</span>
+                                        <span>{{ $key_trends->title }}: {{ $key_trends->percentage }}%</span>
                                         <span>
                                             <svg width="216" height="16" viewBox="0 0 216 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M215.709 8.70711C216.1 8.31658 216.1 7.68342 215.709 7.29289L209.345 0.928933C208.955 0.538408 208.322 0.538408 207.931 0.928933C207.541 1.31946 207.541 1.95262 207.931 2.34315L213.588 8L207.931 13.6569C207.541 14.0474 207.541 14.6805 207.931 15.0711C208.322 15.4616 208.955 15.4616 209.345 15.0711L215.709 8.70711ZM0 9H215.002V7H0V9Z" fill="#B57D2D" />
@@ -73,18 +73,18 @@
                                     </div>
                                 </div>
                                 <div class="item">
-                                    <div class="graThumb" style="height: 100%">$11tn</div>
+                                    <div class="graThumb" style="height: 100%">${{ $key_trends->ending_value }}</div>
                                 </div>
                             </div>
                             <div class="graBtmLine"></div>
                             <div class="graInfoX">
-                                <span>2023</span>
-                                <span>2024</span>
+                                <span>{{ $key_trends->starting_year }}</span>
+                                <span>{{ $key_trends->ending_year }}</span>
                             </div>
                         </div>
                         <div class="bxCntWrap">
-                            <div class="tle">Tokenized Assets Market Size (USD trillion)</div>
-                            <div class="txt">Roland Berger estimates that the value of tokenized assets will reach at conservatively ~$10.9 trillion by 2030, with Real Estate, Debt and Investment Funds being the Top 3 tokenized assets.</div>
+                            <div class="tle">{{ $key_trends->heading }}</div>
+                            <div class="txt">{{ $key_trends->description }}</div>
                         </div>
                     </div>
                 </div>

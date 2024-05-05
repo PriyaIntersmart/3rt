@@ -73,6 +73,13 @@
                     <i class="bi bi-circle"></i><span>Tokeniztation</span>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('key-trends.edit') }}" class="{{ Nav::isRoute('key-trends.edit') }}">
+                    <i class="bi bi-circle"></i><span>Key Trends Content</span>
+                </a>
+            </li>
+
+
 
 
       </li>

@@ -10,6 +10,7 @@ use App\Models\countSetting;
 use App\Models\HomeBanner;
 use App\Models\HomeCms;
 use App\Models\KeyElement;
+use App\Models\KeyTrends;
 use App\Models\MiningCms;
 use App\Models\Miningprocess;
 use App\Models\NewsEvents;
@@ -76,8 +77,9 @@ class FrontendController extends Controller
         $structure_cms = StructureCms::first();
         $tokenization= Tokenization::first();
         $key_elements = KeyElement::orderBy('sort_order')->active()->get();
+        $key_trends=KeyTrends::first();
         return view('frontend::structureoverview',
-        compact('bannerandmeta', 'structure_cms', 'key_elements','tokenization'));
+        compact('bannerandmeta', 'structure_cms', 'key_elements','tokenization','key_trends'));
 
     }
 

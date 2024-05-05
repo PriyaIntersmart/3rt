@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\KeyTrends;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,7 @@ use Modules\Admin\Http\Controllers\DashboardController;
 use Modules\Admin\Http\Controllers\HomeBannerController;
 use Modules\Admin\Http\Controllers\HomeCMSController;
 use Modules\Admin\Http\Controllers\KeyElementController;
+use Modules\Admin\Http\Controllers\KeyTrendController;
 use Modules\Admin\Http\Controllers\MiningCmsController;
 use Modules\Admin\Http\Controllers\MiningProcessController;
 use Modules\Admin\Http\Controllers\NewsEventsCMSController;
@@ -110,6 +112,10 @@ Route::prefix('3RT-admin-portal')->group(function () {
 
         Route::get('/tokenization/edit',[TokenController::class,'edit'])->name('tokenization.edit');
         Route::put('/tokenization/edit/{id}',[TokenController::class,'update'])->name('tokenization.update');
+
+
+        Route::get('/key-trends-contents/edit',[KeyTrendController::class,'edit'])->name('key-trends.edit');
+        Route::put('/key-trends-contents/edit/{id}',[KeyTrendController::class,'update'])->name('key-trends.update');
 
     });
 
