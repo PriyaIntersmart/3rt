@@ -97,6 +97,7 @@ class FrontendController extends Controller
         if($newsandevents) {
             $related_news = NewsEvents::where('id', '!=', $newsandevents->id)
                 ->limit(8)
+                ->active()
                 ->get();
             return view('frontend::newsdetails', compact('newsandevents', 'bannerandmeta', 'related_news'));
         } else {
