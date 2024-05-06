@@ -14,7 +14,7 @@ class ContactusRequest extends FormRequest
         $rules= [
             'title'=>'required|max:80',
             'iframe'=>'required',
-            'address'=>'required',
+            'address'=>'required|max:80',
             'sort_order' => 'integer|min:0',
 
         ];
