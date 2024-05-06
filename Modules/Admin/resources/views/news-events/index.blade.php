@@ -39,7 +39,7 @@
 
                                     <td>
                                         <div class="form-check form-switch">
-                                            <input type="checkbox" class="form-check-input status" data-model="KeyElement"
+                                            <input type="checkbox" class="form-check-input status" data-model="NewsEvents"
                                                 value="{{ $item->status }}"
                                                 data-id="{{ base64_encode($item->id) }}" name="status"
                                                 {{ $item->status == 1 ? 'checked' : '' }}>
