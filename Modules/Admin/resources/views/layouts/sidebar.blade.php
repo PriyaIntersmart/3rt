@@ -174,14 +174,14 @@
                       <i class="bi bi-circle"></i><span>Site Common Content</span>
                   </a>
               </li>
-              <li>
+              {{-- <li>
                   <a href="{{ route('admin-config.index') }}" class="{{ Nav::isRoute('admin-config.index') }}">
                       <i class="bi bi-circle"></i><span>Admin Configuration</span>
                   </a>
-              </li>
+              </li> --}}
               <li>
                   <a href="{{ route('terms-and-condition.edit') }}"
-                      class="{{ Nav::isRoute('terms-and-condition.editx') }}">
+                      class="{{ Nav::isRoute('terms-and-condition.edit') }}">
                       <i class="bi bi-circle"></i><span>Terms and condition</span>
                   </a>
               </li>

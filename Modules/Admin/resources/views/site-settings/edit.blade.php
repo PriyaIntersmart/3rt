@@ -5,7 +5,7 @@
     @if($errors->any())
     {{ implode('', $errors->all('<div>:message</div>')) }}
 @endif
-    <form method="POST" action="#" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('site-common-content.update',$site_common_content->id) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="row">
@@ -14,7 +14,7 @@
                     <h5 class="card-header bg-light-subtle">Edit Site Common Content</h5>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-6 mb-3">
+                            {{-- <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="facebook_link">Facebook Link</label>
                                     <input type="text"
@@ -79,7 +79,7 @@
                                         <span class="invalid-feedback">{{ $message }}</span>
                                     @enderror
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="phone">Phone Number</label>

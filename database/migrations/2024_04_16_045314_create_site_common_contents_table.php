@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('site_common_contents', function (Blueprint $table) {
+            $table->id();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('whatsapp_number')->nullable();

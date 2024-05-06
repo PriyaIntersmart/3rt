@@ -15,7 +15,7 @@ class BannerAndMetaTagController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request, )
+    public function index(Request $request)
     {
 
             $bannerandmeta = BannerAndMetaTag::all();
@@ -37,19 +37,21 @@ class BannerAndMetaTagController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(BannerAndMetaRequest $request, BannerAndMetaTag $bannerandmetatag)
+    public function update(Request $request, $id)
     {
 
-        $data = $request->all();
-
+        $banner_and_meta=BannerAndMetaTag::find($id);
+        $banner_and_meta->page_title=$request->page_title;
+        $banner_and_meta->meta_title=$request->meta_title;
+        $banner_and_meta->meta_description=$request->meta_description;
+        $banner_and_meta->meta_keywords=$request->meta_keywords;
+        $banner_and_meta->other_meta_keywords=$request->other_meta_keywords;
         if ($request->has('banner_image')) {
-            $bannerandmetatag->deleteFile('banner_image');
-            $image = $bannerandmetatag->uploadFile($request->banner_image, $bannerandmetatag->fileDirectory());
+            $banner_and_meta->deleteFile('banner_image');
+            $image = $banner_and_meta->uploadFile($request->banner_image, $banner_and_meta->fileDirectory());
             $data['banner_image'] = $image;
         }
-
-
-        if ($bannerandmetatag->fill($data)->save()) {
+        if ($banner_and_meta->save()) {
 
             return to_route('bannerandmetatag.index')->with('success', ' Banners and Meta Tag updated successfully!');
         }

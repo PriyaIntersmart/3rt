@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card p-1">
                 <div class="card-body">
-                    <form method="POST" action="{{ route('bannerandmetatag.update', @$bannerandmetatags->id) }}"
+                    <form method="POST" action="{{ route('bannerandmetatag.update', $bannerandmetatags->id) }}"
                         enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
@@ -15,7 +15,8 @@
                                 <div class="form-group">
                                     <label for="page">Page*</label>
                                     <input type="text" class="form-control page @error('page') is-invalid @enderror"
-                                        id="page" name="page" value="{{ old('page', @$bannerandmetatags->page) }}" readonly>
+                                        id="page" name="page" value="{{ old('page', @$bannerandmetatags->page) }}"
+                                        readonly>
                                     @error('page')
                                         <span class="invalid-feedback">{{ $message }}</span>
                                     @enderror
@@ -112,32 +113,14 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group">
-                                    <label for="status">Status</label>
-                                    <select class="form-select @error('status') is-invalid @enderror" id="example-select"
-                                        name="status">
-                                        <option value="1"
-                                            {{ old('status', @$bannerandmetatags->status) == '1' ? 'selected' : '' }}>
-                                            Active
-                                        </option>
-                                        <option value="0"
-                                            {{ old('status', @$bannerandmetatags->status) == '0' ? 'selected' : '' }}>
-                                            Inactive
-                                        </option>
-                                    </select>
-                                    @error('status')
-                                        <span class="invalid-feedback">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-primary" id="submitBtn">update</button>
-                </div>
 
-                </form>
+                        </div>
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" id="submitBtn">update</button>
+                        </div>
+
+                    </form>
+                </div>
             </div>
-        </div>
-    @endsection
+        @endsection

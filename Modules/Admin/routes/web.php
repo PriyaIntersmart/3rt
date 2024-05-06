@@ -58,7 +58,10 @@ Route::prefix('3RT-admin-portal')->group(function () {
         Route::post('update-status', [CommonFunctionController::class, 'updateStatus'])->name('update-status');
         Route::post('update-sort-order', [CommonFunctionController::class, 'updateSortOrder'])->name('update-sort-order');
         //banner and meta tag
-        Route::resource('bannerandmetatag', BannerAndMetaTagController::class);
+        Route::get('bannerandmetatag/edit/{id}',[BannerAndMetaTagController::class,'edit'])->name('bannerandmetatag.edit');
+        Route::get('bannerandmetatag',[BannerAndMetaTagController::class,'index'])->name('bannerandmetatag.index');
+
+        Route::put('bannerandmetatag/update/{id}',[BannerAndMetaTagController::class,'update'])->name('bannerandmetatag.update');
         //site common content
         Route::get('site-common-content', [SiteCommonContentController::class, 'edit'])->name('site-common-content.edit');
         Route::put('site-common-content/update/{id}', [SiteCommonContentController::class, 'update'])->name('site-common-content.update');
