@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
     {
         View::composer('frontend::*', function ($view) {
         $siteCommon =  SiteCommonContent::first();
-        $address=Address::orderBy('sort_order')->active()->get();
+        $address=Address::active()->orderBy('sort_order')->get();
 
 
         $view->with(compact('siteCommon','address'));

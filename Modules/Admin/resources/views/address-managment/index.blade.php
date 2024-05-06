@@ -35,13 +35,13 @@
                                     <td>
                                         <input type="text"
                                             value="{{ $item->sort_order }}" class="form-control sort-order w-25"
-                                            data-model="Contactus" data-id="{{ base64_encode($item->id) }}"
+                                            data-model="Address" data-id="{{ base64_encode($item->id) }}"
                                             name="sort_order">
                                     </td>
 
                                     <td>
                                         <div class="form-check form-switch">
-                                            <input type="checkbox" class="form-check-input status" data-model="KeyElement"
+                                            <input type="checkbox" class="form-check-input status" data-model="Address"
                                                 value="{{ $item->status }}"
                                                 data-id="{{ base64_encode($item->id) }}" name="status"
                                                 {{ $item->status == 1 ? 'checked' : '' }}>
