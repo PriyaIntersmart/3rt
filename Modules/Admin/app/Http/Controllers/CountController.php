@@ -7,6 +7,7 @@ use App\Models\countSetting;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Modules\Admin\Http\Requests\CountRequest;
 
 class CountController extends Controller
 {
@@ -30,7 +31,7 @@ class CountController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CountRequest $request)
     {
         $data = $request->all();
 
@@ -59,7 +60,7 @@ class CountController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(CountRequest $request, $id)
     {
         $count_setting=countSetting::find(base64_decode($id));
         $count_setting->count= $request->count;

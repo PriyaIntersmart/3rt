@@ -32,7 +32,7 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->count }}</td>
-                                    <td>{{ $item->subtitle }}</td>
+                                    <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $item->subtitle }}</td>
 
                                     <td>
                                         <input type="text"
