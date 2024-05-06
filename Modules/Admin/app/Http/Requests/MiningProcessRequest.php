@@ -13,7 +13,7 @@ class MiningProcessRequest extends FormRequest
     {
         $rules= [
             'title'=>'required|max:80',
-            'description'=>'required|max:30',
+            'description'=>'required|max:163',
             'sort_order' => 'integer|min:0',
 
         ];

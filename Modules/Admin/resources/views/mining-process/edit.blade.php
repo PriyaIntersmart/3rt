@@ -14,7 +14,7 @@
                 <div class="row">
 
 
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-12 mb-3">
                         <div class="form-group">
                             <label for="title">Title*</label>
                             <input type="text" class="form-control title @error('title') is-invalid @enderror"
@@ -30,7 +30,7 @@
                     <div class="col-md-12 mb-3">
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea id="description" name="description" class="form-control  tinymce @error('description') is-invalid @enderror">{{ old('description', $mining_process->description) }}</textarea>
+                            <textarea id="description" name="description" class="form-control   @error('description') is-invalid @enderror">{{ old('description', $mining_process->description) }}</textarea>
                             @error('description')
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
