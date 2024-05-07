@@ -88,7 +88,7 @@
 
                     <div class="col-md-12 mb-3">
                         <div class="form-group">
-                            <label for="description">Description</label>
+                            <label for="description">Description*</label>
                             <textarea id="description" name="description" class="form-control  tinymce @error('description') is-invalid @enderror">{{ old('description', $key_element->description) }}</textarea>
                             @error('description')
                                 <span class="invalid-feedback">{{ $message }}</span>

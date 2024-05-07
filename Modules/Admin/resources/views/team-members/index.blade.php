@@ -34,7 +34,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td><img src="{{ $team->image_value }}" width="50" height="50"></td>
                                     <td>{{ $team->name }}</td>
-                                    <td>{{ $team->designation }}</td>
+                                    <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $team->designation }}</td>
                                     <td>
                                         <input type="number"
                                             value="{{ $team->sort_order }}" class="form-control sort-order w-25"

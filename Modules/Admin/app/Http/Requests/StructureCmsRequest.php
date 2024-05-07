@@ -17,11 +17,7 @@ class StructureCmsRequest extends FormRequest
             'section_two_image' => 'nullable|image|mimes:png,jpg,webp,jpeg|max:1024',
 
         ];
-        if (in_array($this->method(), ['PUT', 'PATCH'])) {
 
-            $rules['title'] = 'required|max:80';
-            $rules['subtitle'] = 'required|max:150';
-        }
 
         return $rules;
     }
