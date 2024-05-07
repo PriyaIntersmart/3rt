@@ -68,16 +68,7 @@
                       <i class="bi bi-circle"></i><span>Mining Process</span>
                   </a>
               </li>
-              <li>
-                <a href="{{ route('tokenization.edit') }}" class="{{ Nav::isRoute('tokenization.edit') }}">
-                    <i class="bi bi-circle"></i><span>Tokeniztation</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('key-trends.edit') }}" class="{{ Nav::isRoute('key-trends.edit') }}">
-                    <i class="bi bi-circle"></i><span>Key Trends Content</span>
-                </a>
-            </li>
+
 
 
 
@@ -102,7 +93,16 @@
                     <i class="bi bi-circle"></i><span>Structure Overview Cms</span>
                 </a>
             </li>
-
+            <li>
+                <a href="{{ route('tokenization.edit') }}" class="{{ Nav::isRoute('tokenization.edit') }}">
+                    <i class="bi bi-circle"></i><span>Tokeniztation</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('key-trends.edit') }}" class="{{ Nav::isRoute('key-trends.edit') }}">
+                    <i class="bi bi-circle"></i><span>Key Trends Content</span>
+                </a>
+            </li>
 
 
 

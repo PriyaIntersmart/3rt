@@ -26,7 +26,7 @@ class StructureCmsController extends Controller
      */
     public function update(StructureCmsRequest $request, $id)
     {
-   
+
         $structure_cms = StructureCms::find($id);
         $structure_cms->left_section_title = $request->left_section_title;
         $structure_cms->right_section_title = $request->right_section_title;
