@@ -27,6 +27,7 @@ class StructureCmsController extends Controller
     public function update(StructureCmsRequest $request, $id)
     {
 
+
         $structure_cms = StructureCms::find($id);
         $structure_cms->left_section_title = $request->left_section_title;
         $structure_cms->right_section_title = $request->right_section_title;
@@ -40,17 +41,17 @@ class StructureCmsController extends Controller
         if ($request->has('left_section_image')) {
             $structure_cms->deleteFile('left_section_image');
             $image = $structure_cms->uploadFile($request->left_section_image, $structure_cms->fileDirectory());
-            $data['left_section_image'] = $image;
+            $structure_cms->left_section_image = $image;
         }
         if ($request->has('section_one_image')) {
             $structure_cms->deleteFile('section_one_image');
             $image = $structure_cms->uploadFile($request->section_one_image, $structure_cms->fileDirectory());
-            $data['section_one_image'] = $image;
+            $structure_cms->section_one_image = $image;
         }
         if ($request->has('section_two_image')) {
             $structure_cms->deleteFile('section_two_image');
             $image = $structure_cms->uploadFile($request->section_two_image, $structure_cms->fileDirectory());
-            $data['section_two_image'] = $image;
+            $structure_cms->section_two_image = $image;
         }
         if ($structure_cms->save()) {
 
