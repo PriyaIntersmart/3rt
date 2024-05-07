@@ -27,7 +27,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="@yield('meta_title')">
     <meta property="og:description" ccontent="@yield('meta_description')">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="@themeSettings('website_logo')">
     <meta property="og:site_name" content="3RTSmartGold">
     <meta name="twitter:card" content="3RTSmartGold">
     <meta name="twitter:title" content="@yield('meta_title')">
