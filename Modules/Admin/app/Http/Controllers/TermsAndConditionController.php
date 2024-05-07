@@ -3,7 +3,7 @@
 namespace Modules\Admin\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\TermsandCondition;
+use App\Models\TermsAndCondition;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -21,7 +21,7 @@ class TermsAndConditionController extends Controller
      */
     public function edit()
     {
-        $terms_and_condition=TermsandCondition::first();
+        $terms_and_condition=TermsAndCondition::first();
         return view('admin::terms-and-condition.edit',compact('terms_and_condition'));
     }
 
@@ -30,7 +30,7 @@ class TermsAndConditionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $terms_and_condition = TermsandCondition::find($id);
+        $terms_and_condition = TermsAndCondition::find($id);
         $terms_and_condition->title           = strip_tags($request->title);
         $terms_and_condition->sub_title           = $request->sub_title;
         $terms_and_condition->description           = $request->description;
